@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp.ImportedObjects
 {
-    internal class ImportedObject : ImportedObjectBaseClass
+    internal class ImportedObject : ImportedObjectBase
     {
         public string Name { get; set; }
 

@@ -12,8 +12,13 @@ namespace ConsoleApp.Services
 
         public void ImportAndPrintData(string fileName)
         {
-            var importedLines = File.ReadAllLines(fileName);
+            DataProcessing(File.ReadAllLines(fileName));
+            AssignNumberOfChildren();
+            PrintDatabasesTablesAndColumns();
+        }
 
+        private void DataProcessing(string[] importedLines)
+        {
             foreach (var importedLine in importedLines)
             {
                 if (!string.IsNullOrEmpty(importedLine))
@@ -23,10 +28,6 @@ namespace ConsoleApp.Services
                     _importedObjects.Add(importedObject);
                 }
             }
-
-            AssignNumberOfChildren();
-
-            PrintDatabasesTablesAndColumns();
         }
 
         private void AssignNumberOfChildren()
@@ -67,7 +68,7 @@ namespace ConsoleApp.Services
         {
             foreach (var column in _importedObjects.Where(x => x.ParentType == table.Type && x.ParentName == table.Name))
             {
-                Console.WriteLine($"\t\tColumn '{column.Name}' with {column.DataType} data type {(column.IsNullable == true ? "accepts nulls" : "with no nulls")}");
+                Console.WriteLine($"\t\tColumn '{column.Name}' with {column.DataType} data type {(column.IsNullable ? "accepts nulls" : "with no nulls")}");
             }
         }
     }

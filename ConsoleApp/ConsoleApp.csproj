@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="Services\DataReaderService.cs" />
     <Compile Include="ImportedObjects\ImportedObject.cs" />
-    <Compile Include="ImportedObjects\ImportedObjectBaseClass.cs" />
+    <Compile Include="ImportedObjects\ImportedObjectBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

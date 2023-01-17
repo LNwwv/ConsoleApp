@@ -1,11 +1,11 @@
 ﻿using System;
 namespace ConsoleApp.ImportedObjects
 {
-    public class ImportedObjectBaseClass
+    public class ImportedObjectBase
     {
         public string Type { get; set; }
 
-        public ImportedObjectBaseClass(string type)
+        public ImportedObjectBase(string type)
         {
             Type = ModifyStringValue(type);
         }
