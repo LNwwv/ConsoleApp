@@ -1,21 +1,21 @@
 # Code review
-- usuniêto wszystkie nieu¿ywane usingi,
+- usuniÄ™to wszystkie nieuÅ¼ywane usingi,
 
 - z pliku `DataReader.cs` wyniesiono klasy: `ImportedObjectBase` oraz `ImportedObject` do folderu ImportedObjects,
 
-- klasa `ImportedObject` otrzyma³a konstruktor, zmieniony zosta³ typ pola IsNullable na `bool`, a w nim wykorzystywana jest metoda `ImportedObjectBase.ModifyStringValue`, która odpowiada za modyfikacjê wartoœci string.
+- klasa `ImportedObject` otrzymaÅ‚a konstruktor, zmieniony zostaÅ‚ typ pola IsNullable na `bool`, a w nim wykorzystywana jest metoda `ImportedObjectBase.ModifyStringValue`, ktÃ³ra odpowiada za modyfikacjÄ™ wartoÅ›ci string.
 
-- `ImportedObjectBase` zmieni³a nazwê oraz otrzyma³a konstruktor,
+- `ImportedObjectBase` zmieniÅ‚a nazwÄ™ oraz otrzymaÅ‚a konstruktor,
 
-- metodê `ImportAndPrintData` podzielono na 3 oddzielne metody, z których ka¿da odpowiada teraz za pojedyncz¹ funkcjonalnoœæ:
-> 1. `DataProcessing` - przekszta³cenie danych oraz zapisanie do listy obiektów,
-> 1. `AssignNumberOfChildren` - ustawienie odpowiedniej liczby pola `NumberOfChildren` dla ka¿dego z obiektów,
-> 1. `PrintDatabasesTablesAndColumns`, 'PrintTablesAndColumns', `PrintTables` - tak jak wskazuj¹ nazwy funckcji, odpowiadaj¹ za wyœwietlanie odpowiedniego zestawu danych,
+- metodÄ™ `ImportAndPrintData` podzielono na 3 oddzielne metody, z ktÃ³rych kaÅ¼da odpowiada teraz za pojedynczÄ… funkcjonalnoÅ›Ä‡:
+> 1. `DataProcessing` - przeksztaÅ‚cenie danych oraz zapisanie do listy obiektÃ³w,
+> 1. `AssignNumberOfChildren` - ustawienie odpowiedniej liczby pola `NumberOfChildren` dla kaÅ¼dego z obiektÃ³w,
+> 1. `PrintDatabasesTablesAndColumns`, 'PrintTablesAndColumns', `PrintTables` - tak jak wskazujÄ… nazwy funckcji, odpowiadajÄ… za wyÅ›wietlanie odpowiedniego zestawu danych,
 
-- zmieniono sposób wczytywania danych na `File.ReadAllLines`
+- zmieniono sposÃ³b wczytywania danych na `File.ReadAllLines`
 
-- oczyszczanie oraz poprawianie danych dzieje siê teraz przy ich tworzeniu, w konstruktorach
+- oczyszczanie oraz poprawianie danych dzieje siÄ™ teraz przy ich tworzeniu, w konstruktorach
 
-- usystematyzowano równie¿ deklaracje zmiennych w klasach, 
+- usystematyzowano rÃ³wnieÅ¼ deklaracje zmiennych w klasach, 
 
-- doda³em równie¿ krótie README.md dla projektu
+- dodaÅ‚em rÃ³wnieÅ¼ krÃ³tkie README.md dla projektu
